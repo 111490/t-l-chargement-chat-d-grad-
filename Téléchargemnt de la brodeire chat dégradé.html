@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargement de Broderie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #downloadBtn {
+            background-color: #008CBA;
+        }
+    </style>
+</head>
+<body>
+    <h1>Téléchargement de Broderie</h1>
+    <p>Pour accéder à la broderie, nous vous invitons à vous abonner à notre chaîne YouTube.</p>
+    
+    <a href="https://www.youtube.com/channel/UCX8CtYBDIJlzsFSfeOSrP0g" target="_blank" class="button" id="subscribeBtn">S'abonner à la chaîne YouTube</a>
+    
+    <br><br>
+    
+    <a href="https://lesbroderiesdenonette.fr/motif-de-broderie-machine-chat-gratuit" target="_blank" class="button" id="downloadBtn">Télécharger la Broderie</a>
+
+    <script>
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        downloadBtn.addEventListener('click', function(e) {
+            if (!confirm("Avez-vous bien pensé à vous abonner à notre chaîne YouTube ? Cliquez sur OK si oui, ou sur Annuler pour vous abonner d'abord.")) {
+                e.preventDefault();
+                subscribeBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
